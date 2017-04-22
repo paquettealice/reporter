@@ -1,0 +1,17 @@
+.report-tabs li {
+  display:inline-block;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: 0.5em;
+  padding: .5em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.report-tabs li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  bottom: 3px;
+}

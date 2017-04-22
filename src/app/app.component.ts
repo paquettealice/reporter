@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  tabs = ['Sales report', 'something else', 'another something else'];
 }
