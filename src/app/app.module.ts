@@ -10,26 +10,28 @@ import { AppComponent } from './app.component';
 import { ReportTabsComponent } from './reports/report-tabs/report-tabs.component';
 import { ReportMainComponent } from './reports/report-main/report-main.component';
 import { ReportDetailComponent } from './reports/report-detail/report-detail.component';
-import { ReportReducer } from './reports/report.reducer';
+import { ReportReducer, SelectedReportReducer } from './reports/report.reducer';
+import { ReportService, SelectedReportService } from './reports/report.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportTabsComponent,
     ReportMainComponent,
-    ReportDetailComponent,
+    ReportDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     StoreModule.provideStore({
-      ReportReducer
+      ReportReducer,
+      SelectedReportReducer
       // future reducers
     }),
     StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ReportService, SelectedReportService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
